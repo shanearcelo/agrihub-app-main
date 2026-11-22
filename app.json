@@ -1,0 +1,71 @@
+{
+  "expo": {
+    "name": "agrihub-app",
+    "slug": "agrihub-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/agrihub-icon.png",
+    "scheme": ["agrihubapp", "com.babyshane.agrihubapp"],
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "icon": "./assets/images/agrihub-icon.png",
+      "bundleIdentifier": "com.babyshane.agrihubapp"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#1B4332",
+        "foregroundImage": "./assets/images/agrihub-android-foreground.png",
+        "monochromeImage": "./assets/images/agrihub-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "com.babyshane.agrihubapp"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/images/agrihub-icon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#1B4332",
+          "image": "./assets/images/agrihub-logo-circle.png",
+          "imageWidth": 200
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow AgriHub to scan buyer order passes.",
+          "recordAudioAndroid": false
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "Allow ADSSU AgriHub to access your camera to take photos of GCash payment receipts and harvest listings.",
+          "photosPermission": "Allow AgriHub to access photos for product listings, IDs, receipts, and profile pictures.",
+          "microphonePermission": false
+        }
+      ],
+      "expo-web-browser",
+      "expo-sharing"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    },
+    "extra": {
+      "router": {
+        "asyncRoutes": {
+          "web": true
+        }
+      },
+      "eas": {
+        "projectId": "04cfe8c0-4dfc-4d24-a2cb-d51bae0e99e8"
+      }
+    }
+  }
+}
